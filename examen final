@@ -1,0 +1,64 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	
+	int n1,n2,n3,op,N;
+	float prom;
+	int mayor=0,nota;
+	
+	cout<<"Ingrese nota de programacion"<<endl;
+	cin>>n1;
+	cout<<"Ingrese nota de Algorito "<<endl;
+	cin>>n2;
+	cout<<"Ingrese nota de logia de sistemas"<<endl;
+	cin>>n3;
+
+		cout<<"Ingrese que desea visualizar"<<endl;
+		cout<<"1. Mostrar Nota mas alta"<<endl;
+		cout<<"2. Promedio del curso"<<endl;
+		cout<<"3.Indicar si el alumno es promovido o no promovido"<<endl;
+		cin>>op;
+		switch (op){
+			case 1:	
+			if(n1>n2 && n1>n3){	
+				mayor=n1;
+				cout<<"la nota mayor es "<<mayor<<endl;
+				}
+				if(n2>n1 && n2>n3){
+				mayor=n2;
+				cout<<"la nota mayor es "<<mayor<<endl;
+				}
+				if(n3>n1 && n3>n2){
+					mayor=n3;
+					cout<<"la nota mayor es "<<mayor<<endl;
+				}
+				break;
+			case 2: 
+			    N=n1+n2+n3;
+				prom=N/3;
+				cout<<"el promedio del curso es "<<prom<<endl;
+				break;
+			case 3:
+
+				if(n1>=61 && n2>=61 && n3>=61){
+					cout<<"Felicidades ha aprobado el curso"<<endl;
+				}else{
+					cout<<"Lo siento has reprobado el curso, ya que cuenta con una nota baja "<<endl;
+				}
+	
+				break;
+			default:
+				cout<<"opcion invalida, vuelve a intentarlo"<<endl;
+		}
+		
+	while(op==4);
+	
+	
+	system("pause");
+	
+	return 0;
+}
